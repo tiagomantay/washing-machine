@@ -16,7 +16,7 @@ int main(void){
 	system("clear");
 	opt=6;
 
-	printf("\n\n MÁQUINA LAVA-ROUPAS MÁGICA!  v2\n\n");
+	printf("\n\n WASHING MACHINE \n\n");
     printf("\n inicializando ... \n\n");
     sleep(1);
 
@@ -26,7 +26,7 @@ int main(void){
 		scanf("%d",&opt);
 
 		if(opt==1){
-			printf("\n PROGRAMAR  \n\n");
+			printf("\n CONFIG  \n\n");
  			programar();
 			opt=6;
 		}
@@ -34,27 +34,26 @@ int main(void){
 		else if(opt==2){
 			if(prog!=0){
 
-			printf("\n EXECUTAR \n\n");
+			printf("\n EXECUTE \n\n");
 			executar();
 			opt=6;
 			} else {
 				system("clear");
-				printf("\n\n\t\tEscolha um programa de lavagem... \n");
+				printf("\n\n\t\tChoose one washing program... \n");
 				sleep(2);
 			}
 		}
 	}
 
-	printf("\n\n\t CLOSE  ;D \n\n");
+	printf("\n\n\t CLOSE \n\n");
 }
 
 
 void mostraMenu(void){
 	system("clear");
-	printf("\n\t\t LAVADORA DE ROUPAS POWER   8D  ");
-	printf("\n\n ========================== MENU =========================== \n\n\n");
-    printf("\t Digite: \n\n\n\t 1 - PROGRAMAR \n\t 2 - EXECUTAR \n\n\t 0 - DESLIGAR \n");
-    printf("\n Escolha uma opção: \t");
+    	printf("\n\n ========================== MENU =========================== \n\n\n");
+    	printf("\t Digite: \n\n\n\t 1 - PROGRAMAR \n\t 2 - EXECUTAR \n\n\t 0 - DESLIGAR \n");
+    	printf("\n Escolha uma opção: \t");
 }
 
 
@@ -68,26 +67,26 @@ void programar(void){
 
 	while(opt!=0){
 
-		if(opt==1){ 		//NORMAL
+		if(opt==1){
 			tempoLavag = 3;
 			tempoMolho = 0;
 			centrifuga = 3;
 			opt=6;
 		}
 
-		else if(opt==2){  	//ROUPAS SUJAS
+		else if(opt==2){  
 			tempoLavag = 5;
         	tempoMolho = 3;
 	        centrifuga = 5;
 		}
 
-		else if(opt==3){  	//CENTRIFUGAR
+		else if(opt==3){  
         	tempoLavag = 0;
        		tempoMolho = 0;
 	        centrifuga = 3;
 		}
 
-		else if(opt==4){ 	//CUSTOMIZAR
+		else if(opt==4){ 
 			system("clear");
 			printf("\n\t CUSTOMIZAR \n\n Escolha o tempo de molho:  ");
                         scanf("%d",&tempoMolho);
@@ -98,7 +97,7 @@ void programar(void){
 		}
 
 
-		else if(opt==5){	//VER PROGRAMAÇÃO
+		else if(opt==5){	
 			system("clear");
 			verProg();
 			printf("\n\n\n Pressione qq coisa para sair...\n\n");
@@ -162,12 +161,11 @@ void molho(void){
 	int m;
 	system("clear");
 	m=tempoMolho;
-	//printf("\n\n CICLO MOLHO   >  %d segundos",m);
 	sleep(1);
 
 	while(m>=0){
 		system("clear");
-        printf("\n CICLO MOLHO >  %d segundos \n\n\n MOLHO... %d \n",tempoMolho,m);
+        printf("\n CICLO MOLHO >  %d s \n\n\n MOLHO... %d \n",tempoMolho,m);
         sleep(1);
 		m--;
                 }
@@ -206,7 +204,7 @@ void lavar(void){
 
 	system("clear");
 
-	if(l == 0) printf("\n\n Lavagem terminada! \n");
+	if(l == 0) printf("\n\n Done! \n");
 	sleep(2);
 	system("clear");
 }
@@ -215,7 +213,7 @@ void centrifugar(void){
 	int c;
 	c=centrifuga;
 	system("clear");
-	printf("\n CICLO CENTRIFUGAÇÃO >  %d segundos \n\n",centrifuga);
+	printf("\n CICLO CENTRIFUGAÇÃO >  %d s \n\n",centrifuga);
 
 	sleep(1);
 
